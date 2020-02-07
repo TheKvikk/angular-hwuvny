@@ -1,0 +1,9 @@
+<div class="travel-step" *transloco="let t">
+	<h4>{{ t('pageTitle') }}: {{ pageTitle }}</h4>
+	<h4>Name: {{ viewModel.name }}</h4>
+	<h4>Date: {{ viewModel.date | date }}</h4>
+	<h4>Date: {{ viewModel.num }}</h4>
+	<mat-form-field>
+		<input matInput mask="0000/0000" [(ngModel)]="num" />
+	</mat-form-field>
+</div>

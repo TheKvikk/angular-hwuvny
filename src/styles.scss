@@ -1,0 +1,38 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+@import 'assets/scss/_variables';
+
+html,
+body {
+	font-family: 'Quicksand';
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	overflow-x: hidden;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	background-color: rgb(248, 249, 251);
+}
+
+.fill-space {
+	flex: 1 1 auto;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 90%;
+}
+
+@media #{$medium-and-up} {
+	.container {
+		width: 85%;
+	}
+}
+
+@media #{$large-and-up} {
+	.container {
+		width: 70%;
+	}
+}

@@ -1,0 +1,27 @@
+<div class="navigation">
+	<button
+		mat-flat-button
+		color="primary"
+		(click)="goBack()"
+		[disabled]="currentStep === Step.SimulationInput"
+	>
+		Go Back
+	</button>
+	<div class="fill-space"></div>
+	<button
+		mat-flat-button
+		(click)="doStuff()"
+		*ngIf="currentStep == Step.SimulationInput"
+	>
+		Random stuff for Travel
+	</button>
+	<div class="fill-space"></div>
+	<button
+		mat-flat-button
+		color="accent"
+		(click)="goNext()"
+		[disabled]="currentStep === Step.SimulationAdditionalInformation"
+	>
+		Go Next
+	</button>
+</div>
