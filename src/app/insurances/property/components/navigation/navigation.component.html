@@ -1,4 +1,18 @@
 <div class="navigation">
-  <button mat-flat-button color="warn" (click)="goBack()">Go Back</button>
-  <button mat-flat-button color="primary" (click)="goNext()">Go Next</button>
+	<button
+		mat-flat-button
+		color="warn"
+		(click)="goBack()"
+		[disabled]="currentStep === Step.SimulationInput"
+	>
+		{{ 'global.goPrevious' | transloco }}
+	</button>
+	<button
+		mat-flat-button
+		color="primary"
+		(click)="goNext()"
+		[disabled]="currentStep === Step.SimulationAdditionalInformation"
+	>
+		{{ 'global.goNext' | transloco }}
+	</button>
 </div>

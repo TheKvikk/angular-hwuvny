@@ -1,18 +1,18 @@
 import { Store, StoreConfig } from '@datorama/akita';
 import { Injectable } from '@angular/core';
-import { ViewModel } from '../models/view-model';
+import { State } from '../models/state';
 
-export function createInitialState(): ViewModel {
+export function createInitialState(): State {
 	return {
-		name: '123456789',
-		date: new Date(),
-		num: 12345678,
+		name: 'Tom Říha',
+		date: null,
+		num: 232232323,
 	};
 }
 
 @Injectable({ providedIn: 'root' })
 @StoreConfig({ name: 'travel' })
-export class TravelStore extends Store<ViewModel> {
+export class TravelStore extends Store<State> {
 	constructor() {
 		super(createInitialState());
 	}

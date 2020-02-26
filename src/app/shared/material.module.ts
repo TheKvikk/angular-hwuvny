@@ -6,18 +6,18 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSnackBarModule
-  ],
-  exports: [
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSnackBarModule
-  ]
+	imports: [
+		CommonModule,
+		MatButtonModule,
+		MatFormFieldModule,
+		MatInputModule,
+		MatSnackBarModule,
+	],
+	exports: [
+		MatButtonModule,
+		MatFormFieldModule,
+		MatInputModule,
+		MatSnackBarModule,
+	],
 })
-export class MaterialModule { }
+export class MaterialModule {}

@@ -36,3 +36,41 @@ body {
 		width: 70%;
 	}
 }
+
+.tippy-tooltip {
+	background-color: transparent;
+	color: #333;
+}
+
+.tippy-content {
+	background-color: white;
+	border-radius: 8px;
+	border: 2px solid #dde5ea;
+	padding: 10px;
+}
+
+.tippy-tooltip[data-placement^='top'] > .tippy-arrow {
+	border-width: unset;
+	border-top-color: unset;
+	transform-origin: 50% 50%;
+	bottom: -4px;
+	border-left: 2px solid #dde5ea;
+	border-top: 2px solid #dde5ea;
+	background-color: white;
+	width: 8px;
+	height: 8px;
+	transform: rotate(-135deg);
+}
+
+.tippy-tooltip[data-placement^='bottom'] > .tippy-arrow {
+	border-width: unset;
+	border-bottom-color: transparent;
+	transform-origin: 50% 50%;
+	top: -4px;
+	border-left: 2px solid #dde5ea;
+	border-top: 2px solid #dde5ea;
+	background-color: white;
+	width: 8px;
+	height: 8px;
+	transform: rotate(45deg);
+}

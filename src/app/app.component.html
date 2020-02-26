@@ -1,22 +1,42 @@
-<div>
-	<mat-radio-group class="radio-group" [(ngModel)]="insuranceType">
-		<mat-radio-button
-			class="radio-button"
-			[value]="1"
-			(change)="pickSteps($event.value)"
-		>
-			Property
-		</mat-radio-button>
-		<mat-radio-button
-			[value]="2"
-			class="radio-button"
-			(change)="pickSteps($event.value)"
-		>
-			Travel
-		</mat-radio-button>
-	</mat-radio-group>
+<div class="container">
+	<div class="app-settings">
+		<div>
+			<label>{{ 'applicationLanguage' | transloco }}</label>
+			<mat-radio-group
+				class="radio-group"
+				(change)="setApplicationLanguage($event.value)"
+			>
+				<mat-radio-button
+					class="radio-button"
+					*ngFor="let lang of availableLangs"
+					[value]="lang"
+					[checked]="lang === activeLang"
+				>
+					{{ lang }}
+				</mat-radio-button>
+			</mat-radio-group>
+		</div>
 
-	<div class="container">
-		<steps-renderer [stepsContainer]="steps"></steps-renderer>
+		<div>
+			<label>{{ 'productType' | transloco }}</label>
+			<mat-radio-group class="radio-group" [(ngModel)]="insuranceType">
+				<mat-radio-button
+					class="radio-button"
+					[value]="1"
+					(change)="pickSteps($event.value)"
+				>
+					Property
+				</mat-radio-button>
+				<mat-radio-button
+					[value]="2"
+					class="radio-button"
+					(change)="pickSteps($event.value)"
+				>
+					Travel
+				</mat-radio-button>
+			</mat-radio-group>
+		</div>
 	</div>
+
+	<steps-renderer [stepsContainer]="steps"></steps-renderer>
 </div>

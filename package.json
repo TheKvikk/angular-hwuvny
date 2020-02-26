@@ -5,8 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
-    "build": "ng build",
-    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
+    "build": "ng build"
   },
   "dependencies": {
     "@angular/animations": "^9.0.0",
@@ -20,10 +19,12 @@
     "@angular/platform-browser-dynamic": "^9.0.0",
     "@angular/router": "^9.0.0",
     "@datorama/akita": "^4.17.5",
+    "@datorama/akita-ng-forms-manager": "^3.3.0",
     "@ngneat/transloco": "^2.12.4",
     "core-js": "^3.5.0",
     "ngx-mask": "^8.1.6",
     "rxjs": "^6.5.3",
+    "tippy.js": "^5.2.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

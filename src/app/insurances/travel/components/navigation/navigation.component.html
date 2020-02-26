@@ -5,11 +5,13 @@
 		(click)="goBack()"
 		[disabled]="currentStep === Step.SimulationInput"
 	>
-		Go Back
+		{{ 'global.goPrevious' | transloco }}
 	</button>
 	<div class="fill-space"></div>
 	<button
 		mat-flat-button
+		tooltip
+		[tooltipOptions]="{ name: 'Tom', content: 'Ahoj Tome Řího' }"
 		(click)="doStuff()"
 		*ngIf="currentStep == Step.SimulationInput"
 	>
@@ -18,10 +20,12 @@
 	<div class="fill-space"></div>
 	<button
 		mat-flat-button
+		tooltip
+		[tooltipOptions]="{ name: 'Test', content: 'Ahoj' }"
 		color="accent"
 		(click)="goNext()"
 		[disabled]="currentStep === Step.SimulationAdditionalInformation"
 	>
-		Go Next
+		{{ 'global.goNext' | transloco }}
 	</button>
 </div>

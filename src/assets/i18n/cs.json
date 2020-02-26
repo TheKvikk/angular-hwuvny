@@ -1,3 +1,9 @@
 {
-	"pageTitle": "Page title"
+	"applicationLanguage": "Jazyk aplikace",
+	"productType": "Produkt",
+	"pageTitle": "Titulek stránky",
+	"global": {
+		"goPrevious": "Předchozí krok",
+		"goNext": "Další krok"
+	}
 }

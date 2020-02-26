@@ -3,7 +3,6 @@ import {
 	Input,
 	ViewChild,
 	ComponentFactoryResolver,
-	Injector,
 	ViewChildren,
 	QueryList,
 	AfterViewInit,
@@ -46,7 +45,6 @@ class StepsRendererComponent implements OnInit, AfterViewInit {
 
 	constructor(
 		private componentFactoryResolver: ComponentFactoryResolver,
-		private injector: Injector,
 		private cd: ChangeDetectorRef,
 		private insuranceService: InsuranceService,
 	) {

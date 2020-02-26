@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { NavigationBaseComponent } from '../../../common/components/navigation/navigation.component';
-import { Step } from '../../../common/models/step';
-import { InsuranceStore } from 'src/app/insurances/common/state/insurance.store';
+import { NavigationBaseComponent } from '../../../core/components/navigation/navigation.component';
+import { Step } from '../../../core/models/step';
+import { InsuranceStore } from 'src/app/insurances/core/state/insurance.store';
 
 @Component({
 	selector: 'navigation',

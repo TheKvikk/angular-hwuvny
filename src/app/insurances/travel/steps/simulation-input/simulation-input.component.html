@@ -1,9 +1,36 @@
-<div class="travel-step" *transloco="let t">
-	<h4>{{ t('pageTitle') }}: {{ pageTitle }}</h4>
-	<h4>Name: {{ viewModel.name }}</h4>
-	<h4>Date: {{ viewModel.date | date }}</h4>
-	<h4>Date: {{ viewModel.num }}</h4>
-	<mat-form-field>
-		<input matInput mask="0000/0000" [(ngModel)]="num" />
-	</mat-form-field>
+<div class="travel-step">
+	<h4>{{ 'pageTitle' | transloco }}: {{ pageTitle }}</h4>
+
+	<form [formGroup]="form">
+		<mat-form-field>
+			<input matInput formControlName="name" />
+		</mat-form-field>
+
+		<mat-form-field>
+			<input matInput mask="0000/0000" formControlName="num" />
+		</mat-form-field>
+	</form>
+
+	<div>
+		To debug use: hideOnClick: false, trigger: 'click', interactive: false
+	</div>
+	<div
+		style="width: 20px; height: 20px; background-color: red;"
+		tooltip
+		[tooltipOptions]="{
+			name: 'A',
+			content:
+				'<div><span>Ahoj</span><br /><img src=https://nsure-test0.blogic.cz/assets/img/VehicleTechnicalCertificate/performance.jpg /></div>',
+			maxWidth: 'none',
+			interactive: true,
+			hideOnClick: false,
+			trigger: 'click'
+		}"
+	></div>
+
+	<button (click)="t1()">Show 'Ahoj Tome Řího' tooltip</button>
+	<button (click)="t2()">Show 'Ahoj' tooltip</button>
+	<button (click)="t3()">Show 'Mnau' tooltip</button>
 </div>
+
+<ng-template></ng-template>
