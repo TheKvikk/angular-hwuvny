@@ -8,7 +8,7 @@ import { TooltipService } from './services/tooltip.service';
 import { InputTextComponent } from './components/inputs/input-text.component';
 import { TooltipComponent } from './components/tooltip/tooltip.component';
 import { InputTextWithMaskComponent } from './components/inputs/input-text-with-mask.component';
-import { SvgDirective } from './directives/svg/svg.directive';
+import { IconComponent } from './components/icons/icon.component';
 
 @NgModule({
 	imports: [
@@ -19,16 +19,16 @@ import { SvgDirective } from './directives/svg/svg.directive';
 		IMaskModule,
 	],
 	declarations: [
+		IconComponent,
 		InputTextComponent,
 		InputTextWithMaskComponent,
-		SvgDirective,
 		TooltipComponent,
 		TooltipDirective,
 	],
 	exports: [
+		IconComponent,
 		InputTextComponent,
 		InputTextWithMaskComponent,
-		SvgDirective,
 		TooltipComponent,
 		TooltipDirective,
 		TooltipService,

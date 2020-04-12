@@ -7,6 +7,8 @@ import { InsurancesModule } from './insurances/insurances.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './shared/transloco-root.module';
+import { IconService } from './shared/services/icon.service';
+import { help } from './shared/components/icons/icons';
 
 @NgModule({
 	imports: [
@@ -22,4 +24,8 @@ import { TranslocoRootModule } from './shared/transloco-root.module';
 	declarations: [AppComponent],
 	bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+	constructor(private iconService: IconService) {
+		this.iconService.registerIcons([help]);
+	}
+}

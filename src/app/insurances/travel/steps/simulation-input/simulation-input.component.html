@@ -2,28 +2,29 @@
 	<h4>{{ t('pageTitle') }}: {{ pageTitle }}</h4>
 
 	<form [formGroup]="form">
-		<!-- <mat-form-field>
-			<input matInput formControlName="name" />
-		</mat-form-field>
-
-		<mat-form-field>
-			<input matInput mask="0000/0000" formControlName="num" />
-		</mat-form-field> -->
-
 		<input-text name="name" disabled></input-text>
 		<input-text-with-mask name="num"></input-text-with-mask>
 	</form>
 
 	<section>
-		<h3>{{ t('travel.simulationInput.tooltips') }}</h3>
+		<h3>{{ t('travel.simulationInput.tooltipsHeader') }}</h3>
 
-		<tooltip [name]="'A'" [placement]="'right'">
-			<strong>Značka vozidla</strong> je výrobce vozidla<br />
+		{{ t('travel.simulationInput.classicTooltip') }}:
+		<tooltip
+			[name]="'A'"
+			[title]="t('travel.simulationInput.brandHelp')"
+			[placement]="'right'"
+		>
+			<span [innerHTML]="t('travel.simulationInput.brand')"></span>
+			<br />
 			<img
 				src="https://nsure-test0.blogic.cz/assets/img/technical-certificate/brandName.jpg"
 			/>
 		</tooltip>
 
+		<div>
+			{{ t('travel.simulationInput.showAllTooltips') }}
+		</div>
 		<div>
 			<button mat-flat-button color="primary" (click)="t1()">
 				{{

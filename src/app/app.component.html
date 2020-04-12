@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *transloco="let t">
 	<div class="app-settings">
 		<div>
 			<label>{{ 'applicationLanguage' | transloco }}</label>
@@ -12,7 +12,7 @@
 					[value]="lang"
 					[checked]="lang === activeLang"
 				>
-					{{ lang }}
+					{{ t('application.languages.' + lang) }}
 				</mat-radio-button>
 			</mat-radio-group>
 		</div>
@@ -25,14 +25,14 @@
 					[value]="1"
 					(change)="pickSteps($event.value)"
 				>
-					Property
+					{{ t('insurances.productTypes.property') }}
 				</mat-radio-button>
 				<mat-radio-button
 					[value]="2"
 					class="radio-button"
 					(change)="pickSteps($event.value)"
 				>
-					Travel
+					{{ t('insurances.productTypes.travel') }}
 				</mat-radio-button>
 			</mat-radio-group>
 		</div>
