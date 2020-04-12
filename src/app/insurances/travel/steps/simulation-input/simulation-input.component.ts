@@ -2,8 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AkitaNgFormsManager } from '@datorama/akita-ng-forms-manager';
 import { State } from '../../models/state';
-import { StepBaseComponent } from '../../../core/components/step-base.component';
 import { PersistNgFormPlugin } from '@datorama/akita';
+import { StepBaseComponent } from '../../../core/components/step-base.component';
 import { TravelQuery } from '../../state/travel.query';
 import { TooltipService } from 'src/app/shared/services/tooltip.service';
 

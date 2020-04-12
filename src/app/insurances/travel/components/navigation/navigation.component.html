@@ -1,31 +1,35 @@
-<div class="navigation">
+<div class="navigation" *transloco="let t">
 	<button
-		mat-flat-button
+		mat-raised-button
 		color="primary"
 		(click)="goBack()"
 		[disabled]="currentStep === Step.SimulationInput"
 	>
-		{{ 'global.goPrevious' | transloco }}
+		{{ t('global.goPrevious') }}
 	</button>
+
 	<div class="fill-space"></div>
+
 	<button
-		mat-flat-button
+		mat-raised-button
 		tooltip
 		[tooltipOptions]="{ name: 'Tom', content: 'Ahoj Tome Řího' }"
 		(click)="doStuff()"
 		*ngIf="currentStep == Step.SimulationInput"
 	>
-		Random stuff for Travel
+		{{ t('travel.navigation.randomButton') }}
 	</button>
+
 	<div class="fill-space"></div>
+
 	<button
-		mat-flat-button
+		mat-raised-button
+		color="accent"
 		tooltip
 		[tooltipOptions]="{ name: 'Test', content: 'Ahoj' }"
-		color="accent"
 		(click)="goNext()"
 		[disabled]="currentStep === Step.SimulationAdditionalInformation"
 	>
-		{{ 'global.goNext' | transloco }}
+		{{ t('global.goNext') }}
 	</button>
 </div>

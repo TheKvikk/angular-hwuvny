@@ -4,24 +4,31 @@ import {
 	forwardRef,
 	Input,
 } from '@angular/core';
-import { NG_VALUE_ACCESSOR, FormControl } from '@angular/forms';
+import {
+	NG_VALUE_ACCESSOR,
+	ControlContainer,
+	FormGroupDirective,
+} from '@angular/forms';
 import { AbstractInputComponent } from '../abstraction/input.component';
 
 @Component({
 	selector: 'input-text',
 	template: `
-		<mat-form-field [hideRequiredMarker]="false" [floatLabel]="'auto'">
-			<input
-				matInput
-				[id]="cid"
-				[type]="type"
-				[placeholder]="placeholder"
-				[readonly]="inputReadonly"
-				[required]="inputRequired"
-				(blur)="onBlur.next()"
-				(focus)="onFocus.next()"
-			/>
-		</mat-form-field>
+		<ng-container>
+			<mat-form-field [hideRequiredMarker]="false" [floatLabel]="'auto'">
+				<input
+					matInput
+					[id]="cid"
+					[type]="type"
+					[placeholder]="placeholder"
+					[readonly]="inputReadonly"
+					[required]="inputRequired"
+					(blur)="onBlur.next()"
+					(focus)="onFocus.next()"
+					formControlName="{{ name }}"
+				/>
+			</mat-form-field>
+		</ng-container>
 	`,
 	providers: [
 		{
@@ -30,8 +37,12 @@ import { AbstractInputComponent } from '../abstraction/input.component';
 			multi: true,
 		},
 	],
+	viewProviders: [
+		{
+			provide: ControlContainer,
+			useExisting: FormGroupDirective,
+		},
+	],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class InputTextComponent extends AbstractInputComponent {
-	@Input() control: FormControl;
-}
+export class InputTextComponent extends AbstractInputComponent {}

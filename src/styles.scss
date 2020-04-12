@@ -12,7 +12,7 @@ body {
 	overflow-x: hidden;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	background-color: rgb(248, 249, 251);
+	background-color: #f8f9fb;
 }
 
 .fill-space {
@@ -37,7 +37,7 @@ body {
 	}
 }
 
-.tippy-tooltip {
+.tippy-box {
 	background-color: transparent;
 	color: #333;
 }
@@ -49,28 +49,6 @@ body {
 	padding: 10px;
 }
 
-.tippy-tooltip[data-placement^='top'] > .tippy-arrow {
-	border-width: unset;
-	border-top-color: unset;
-	transform-origin: 50% 50%;
-	bottom: -4px;
-	border-left: 2px solid #dde5ea;
-	border-top: 2px solid #dde5ea;
-	background-color: white;
-	width: 8px;
-	height: 8px;
-	transform: rotate(-135deg);
-}
-
-.tippy-tooltip[data-placement^='bottom'] > .tippy-arrow {
-	border-width: unset;
-	border-bottom-color: transparent;
-	transform-origin: 50% 50%;
-	top: -4px;
-	border-left: 2px solid #dde5ea;
-	border-top: 2px solid #dde5ea;
-	background-color: white;
-	width: 8px;
-	height: 8px;
-	transform: rotate(45deg);
+.tippy-arrow {
+	color: #dde5ea;
 }

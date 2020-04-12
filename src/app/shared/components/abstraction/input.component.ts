@@ -1,8 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { AbstractNgModelComponent } from './abstract-ng-model.component';
+import { uuid } from '../../utils';
 
 @Component({ template: '' })
-export class AbstractInputComponent extends AbstractNgModelComponent<string> {
+export class AbstractInputComponent {
+	@Input()
+	cid = uuid();
+
 	@Input()
 	readonly = false;
 
@@ -15,11 +18,12 @@ export class AbstractInputComponent extends AbstractNgModelComponent<string> {
 	@Input()
 	type = 'text';
 
-	// tslint:disable-next-line: no-output-on-prefix
+	@Input()
+	name: string;
+
 	@Output()
 	onBlur = new EventEmitter<void>();
 
-	// tslint:disable-next-line: no-output-on-prefix
 	@Output()
 	onFocus = new EventEmitter<void>();
 

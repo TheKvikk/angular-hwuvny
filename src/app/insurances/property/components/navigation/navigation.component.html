@@ -1,18 +1,19 @@
-<div class="navigation">
+<div class="navigation" *transloco="let t">
 	<button
-		mat-flat-button
+		mat-raised-button
 		color="warn"
 		(click)="goBack()"
 		[disabled]="currentStep === Step.SimulationInput"
 	>
-		{{ 'global.goPrevious' | transloco }}
+		{{ t('global.goPrevious') }}
 	</button>
+
 	<button
-		mat-flat-button
+		mat-raised-button
 		color="primary"
 		(click)="goNext()"
 		[disabled]="currentStep === Step.SimulationAdditionalInformation"
 	>
-		{{ 'global.goNext' | transloco }}
+		{{ t('global.goNext') }}
 	</button>
 </div>

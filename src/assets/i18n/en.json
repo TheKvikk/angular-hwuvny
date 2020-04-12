@@ -1,9 +1,28 @@
 {
+	"appliction": {
+		"language": {
+			"cs": "Česky",
+			"en": "Anglicky"
+		}
+	},
 	"applicationLanguage": "Application Language",
 	"productType": "Product",
 	"pageTitle": "Page title",
 	"global": {
 		"goPrevious": "Previous Step",
-		"goNext": "Next Step"
+		"goNext": "Next Step",
+		"productTypes": {
+			"property": "Majetek",
+			"travel": "Cestovko"
+		}
+	},
+	"travel": {
+		"navigation": {
+			"randomButton": "Random button"
+		},
+		"simulationInput": {
+			"tooltips": "Tooltips",
+			"showTooltip": "Show '{{ name }}'"
+		}
 	}
 }

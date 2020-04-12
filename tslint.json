@@ -69,7 +69,7 @@
     "no-input-rename": true,
     "no-misused-new": true,
     "no-non-null-assertion": true,
-    "no-output-on-prefix": true,
+    "no-output-on-prefix": false,
     "no-output-rename": true,
     "no-shadowed-variable": true,
     "no-string-literal": false,

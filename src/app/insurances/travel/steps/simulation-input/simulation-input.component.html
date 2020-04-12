@@ -1,36 +1,45 @@
-<div class="travel-step">
-	<h4>{{ 'pageTitle' | transloco }}: {{ pageTitle }}</h4>
+<div class="travel-step" *transloco="let t">
+	<h4>{{ t('pageTitle') }}: {{ pageTitle }}</h4>
 
 	<form [formGroup]="form">
-		<mat-form-field>
+		<!-- <mat-form-field>
 			<input matInput formControlName="name" />
 		</mat-form-field>
 
 		<mat-form-field>
 			<input matInput mask="0000/0000" formControlName="num" />
-		</mat-form-field>
+		</mat-form-field> -->
+
+		<input-text name="name" disabled></input-text>
+		<input-text-with-mask name="num"></input-text-with-mask>
 	</form>
 
-	<div>
-		To debug use: hideOnClick: false, trigger: 'click', interactive: false
-	</div>
-	<div
-		style="width: 20px; height: 20px; background-color: red;"
-		tooltip
-		[tooltipOptions]="{
-			name: 'A',
-			content:
-				'<div><span>Ahoj</span><br /><img src=https://nsure-test0.blogic.cz/assets/img/VehicleTechnicalCertificate/performance.jpg /></div>',
-			maxWidth: 'none',
-			interactive: true,
-			hideOnClick: false,
-			trigger: 'click'
-		}"
-	></div>
+	<section>
+		<h3>{{ t('travel.simulationInput.tooltips') }}</h3>
 
-	<button (click)="t1()">Show 'Ahoj Tome Řího' tooltip</button>
-	<button (click)="t2()">Show 'Ahoj' tooltip</button>
-	<button (click)="t3()">Show 'Mnau' tooltip</button>
+		<tooltip [name]="'A'" [placement]="'right'">
+			<strong>Značka vozidla</strong> je výrobce vozidla<br />
+			<img
+				src="https://nsure-test0.blogic.cz/assets/img/technical-certificate/brandName.jpg"
+			/>
+		</tooltip>
+
+		<div>
+			<button mat-flat-button color="primary" (click)="t1()">
+				{{
+					t('travel.simulationInput.showTooltip', { name: 'Ahoj Tome Řího' })
+				}}
+			</button>
+			<button mat-flat-button color="primary" (click)="t2()">
+				{{ t('travel.simulationInput.showTooltip', { name: 'Ahoj' }) }}
+			</button>
+			<button mat-flat-button color="primary" (click)="t3()">
+				{{
+					t('travel.simulationInput.showTooltip', { name: 'Interaktivní HTML' })
+				}}
+			</button>
+		</div>
+	</section>
 </div>
 
 <ng-template></ng-template>
