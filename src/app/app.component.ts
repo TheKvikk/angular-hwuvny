@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StepsService } from './insurances/core/services/steps.service';
 import { StepsContainer } from './insurances/core/models/steps-container';
 import { TranslocoService, AvailableLangs } from '@ngneat/transloco';
+import { InsuranceType } from './insurances/core/models/insurance-type';
 
 @Component({
 	selector: 'app',
@@ -9,7 +10,7 @@ import { TranslocoService, AvailableLangs } from '@ngneat/transloco';
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-	insuranceType: 1 | 2 = 2;
+	insuranceType: InsuranceType = 1;
 	steps: StepsContainer;
 	availableLangs: AvailableLangs;
 	activeLang: string;
@@ -26,12 +27,12 @@ export class AppComponent implements OnInit {
 		this.getActiveLang();
 	}
 
-	pickSteps = (step: number) => {
-		if (step === 1) {
+	pickSteps = (step: InsuranceType) => {
+		if (step === InsuranceType.Property) {
 			this.steps = this.stepsService.getPropertySteps();
 		}
 
-		if (step === 2) {
+		if (step === InsuranceType.Travel) {
 			this.steps = this.stepsService.getTravelSteps();
 		}
 	};

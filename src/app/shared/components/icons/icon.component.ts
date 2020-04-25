@@ -24,8 +24,8 @@ export type icons = 'help';
 			version="1.1"
 			xmlns="http://www.w3.org/2000/svg"
 			xmlns:xlink="http://www.w3.org/1999/xlink"
-			[attr.width]="width"
-			[attr.height]="height"
+			[attr.width]="width + 'px'"
+			[attr.height]="height + 'px'"
 		>
 			<title *ngIf="ariaTitle" [attr.id]="ariaLabelledBy">
 				{{ ariaTitle }}
@@ -34,7 +34,7 @@ export type icons = 'help';
 			<use [attr.xlink:href]="'#' + type"></use>
 		</svg>
 	`,
-	styles: ['svg { color: inherit; fill: currentColor; }'],
+	styleUrls: ['./icon.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IconComponent implements OnChanges {
@@ -44,8 +44,8 @@ export class IconComponent implements OnChanges {
 
 	@Input() title: string;
 	@Input() type: icons;
-	@Input() width = '24px';
-	@Input() height = '24px';
+	@Input() width = 24;
+	@Input() height = 24;
 
 	constructor() {
 		this.ariaHidden = true;

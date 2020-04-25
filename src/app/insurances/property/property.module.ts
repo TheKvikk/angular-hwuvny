@@ -4,9 +4,17 @@ import { PropertySimulationInputComponent } from './steps/simulation-input/simul
 import { PropertyNavigationComponent } from './components/navigation/navigation.component';
 import { TranslocoRootModule } from '../../shared/transloco-root.module';
 import { MaterialModule } from 'src/app/shared/material.module';
+import { CoreModule } from '../core/core.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
-	imports: [CommonModule, MaterialModule, TranslocoRootModule],
+	imports: [
+		CommonModule,
+		MaterialModule,
+		TranslocoRootModule,
+		SharedModule,
+		CoreModule,
+	],
 	declarations: [PropertySimulationInputComponent, PropertyNavigationComponent],
 	entryComponents: [
 		PropertySimulationInputComponent,

@@ -1,0 +1,57 @@
+<div class="insurance-item">
+	<div class="insurance-item__header">
+		<div class="insurance-item__icon">
+			<icon
+				[type]="'assistance'"
+				[title]="'Rozšířená asistence'"
+				[width]="35"
+				[height]="35"
+			></icon>
+		</div>
+
+		<div class="insurance-item__title">
+			<span>Poškození zvířetem</span>
+		</div>
+
+		<tooltip
+			[name]="'Rozšířená asistence'"
+			[title]="'Rozšířená asistence'"
+			[placement]="'right'"
+		>
+			<span
+				>Asistenční služby řeší nenadálé události související s provozem
+				pojišťovaného vozidla (např. odtah a uskladnění vozu, opravy na místě,
+				ubytování, právní asistence atd.) Sjednáním Rozšířené asistence je
+				myšlena nejširší nabídka pojišťovny.</span
+			>
+		</tooltip>
+
+		<div class="insurance-item__spacer"></div>
+
+		<div class="insurance-item__action">
+			<div>Chci pojistit</div>
+			<div>
+				<input
+					type="checkbox"
+					[(ngModel)]="isOpen"
+					(change)="toggle($event.currentTarget.checked)"
+				/>
+			</div>
+		</div>
+	</div>
+
+	<div #collapsible class="insurance-item__content-container">
+		<div class="insurance-item__content">
+			Hodor, hodor. Hodor. Hodor hodor HODOR! Hodor. Hodor, hodor, hodor hodor.
+			Hodor, hodor. Hodor. HODOR? HODOR hodor, hodor. Hodor hodor HODOR! Hodor.
+			Hodor! Hodor hodor. Hodor hodor HODOR! Hodor. Hodor hodor HODOR! Hodor.
+			Hodor, hodor. Hodor. Hodor hodor HODOR! Hodor. Hodor, hodor. Hodor. Hodor.
+			HODOR? Hodor hodor HODOR! Hodor. Hodor hodor HODOR! Hodor. Hodor? Hodor,
+			hodor. Hodor. Hodor. Hodor hodor. Hodor! Hodor hodor. Hodor hodor! Hodor
+			hodor. Hodor hodor! HODOR? Hodor hodor HODOR! Hodor. HODOR hodor, hodor.
+			Hodor hodor! HODOR? Hodor, hodor. Hodor. Hodor. HODOR hodor, hodor. Hodor,
+			hodor, hodor hodor. Hodor, hodor, hodor hodor. HODOR? Hodor hodor. Hodor
+			hodor. Hodor? Hodor, hodor, hodor hodor.
+		</div>
+	</div>
+</div>

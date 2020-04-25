@@ -1,0 +1,13 @@
+:host {
+	display: inline-block;
+}
+
+.tooltip {
+	display: flex;
+	color: #17d6fe;
+
+	::ng-deep svg {
+		stroke: currentColor;
+		stroke-width: 2;
+	}
+}

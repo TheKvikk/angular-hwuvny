@@ -5,6 +5,7 @@ import { StepBaseComponent } from '../../../core/components/step-base.component'
 
 @Component({
 	templateUrl: './simulation-input.component.html',
+	styleUrls: ['./simulation-input.component.scss'],
 })
 class SimulationInputComponent extends StepBaseComponent {
 	get viewModel(): ViewModel {

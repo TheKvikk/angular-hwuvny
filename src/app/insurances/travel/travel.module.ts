@@ -6,6 +6,7 @@ import { TravelSimulationAdditionalInformationComponent } from './steps/simulati
 import { TravelNavigationComponent } from './components/navigation/navigation.component';
 import { TranslocoRootModule } from '../../shared/transloco-root.module';
 import { MaterialModule } from 'src/app/shared/material.module';
+import { CoreModule } from '../core/core.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
@@ -16,6 +17,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 		MaterialModule,
 		TranslocoRootModule,
 		SharedModule,
+		CoreModule,
 	],
 	declarations: [
 		TravelSimulationInputComponent,

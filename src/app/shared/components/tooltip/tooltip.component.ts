@@ -11,21 +11,18 @@ import { TooltipService } from '../../services/tooltip.service';
 
 @Component({
 	selector: 'tooltip',
-	template: `<div class="tooltip" tooltip [tooltipOptions]="options">
-		<icon
-			[type]="'help'"
-			[title]="title"
-			[width]="'20px'"
-			[height]="'20px'"
-		></icon>
+	template: `<div
+		class="tooltip"
+		tooltip
+		[tooltipOptions]="options"
+		style="width: 20px; height: 20px;"
+	>
+		<icon [type]="'help'" [title]="title" [width]="20" [height]="20"></icon>
 		<div style="display: none;" #tooltipBody data-template="template">
 			<ng-content></ng-content>
 		</div>
 	</div>`,
-	styles: [
-		'.tooltip { display: inline-block; color: #17d6fe; }',
-		'::ng-deep svg { stroke: currentColor; stroke-width: 2; }',
-	],
+	styleUrls: ['./tooltip.component.scss'],
 })
 class TooltipComponent implements OnInit, AfterViewInit {
 	@ViewChild('tooltipBody', { static: true })
@@ -35,8 +32,7 @@ class TooltipComponent implements OnInit, AfterViewInit {
 
 	@Input() name: string;
 	@Input() title: string;
-	@Input() interactive = false;
-	@Input() maxWidth: number | string;
+	@Input() maxWidth: number | string = 350;
 	@Input() placement: 'top' | 'right' | 'bottom' | 'left' = null;
 
 	constructor(private tooltipService: TooltipService) {}
