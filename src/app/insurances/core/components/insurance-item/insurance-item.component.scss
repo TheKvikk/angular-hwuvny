@@ -46,13 +46,10 @@
 		border-color: #dde5ea;
 		overflow: hidden;
 		height: 0px;
-
-		&--opened {
-			border-top: 2px solid #dde5ea;
-		}
 	}
 
 	.insurance-item__content {
 		padding: 10px 50px;
+		border-top: 2px solid #dde5ea;
 	}
 }
