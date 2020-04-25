@@ -5198,6 +5198,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var _ngneat_transloco__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngneat/transloco */ "./node_modules/@ngneat/transloco/__ivy_ngcc__/fesm2015/ngneat-transloco.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/environments/environment.prod */ "./src/environments/environment.prod.ts");
+
 
 
 
@@ -5207,7 +5209,7 @@ let TranslocoHttpLoader = class TranslocoHttpLoader {
         this.http = http;
     }
     getTranslation(lang) {
-        return this.http.get(`/assets/i18n/${lang}.json`);
+        return this.http.get(`./assets/i18n/${lang}.json`);
     }
 };
 TranslocoHttpLoader.ctorParameters = () => [
@@ -5232,7 +5234,7 @@ TranslocoRootModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
                     // Remove this option if your application
                     // doesn't support changing language in runtime.
                     reRenderOnLangChange: true,
-                    prodMode: false,
+                    prodMode: src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_4__["environment"].production,
                 }),
             },
             { provide: _ngneat_transloco__WEBPACK_IMPORTED_MODULE_2__["TRANSLOCO_LOADER"], useClass: TranslocoHttpLoader },
@@ -5261,6 +5263,25 @@ function uuid(a) {
         ? (a ^ ((Math.random() * 16) >> (a / 4))).toString(16)
         : ('' + 1e7 + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, uuid);
 }
+
+
+/***/ }),
+
+/***/ "./src/environments/environment.prod.ts":
+/*!**********************************************!*\
+  !*** ./src/environments/environment.prod.ts ***!
+  \**********************************************/
+/*! exports provided: environment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+const environment = {
+    production: true,
+};
 
 
 /***/ }),
