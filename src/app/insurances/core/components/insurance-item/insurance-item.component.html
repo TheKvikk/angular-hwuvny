@@ -40,7 +40,11 @@
 		</div>
 	</div>
 
-	<div #collapsible class="insurance-item__content-container">
+	<div
+		#collapsible
+		class="insurance-item__content-container"
+		[ngClass]="{ 'insurance-item__content-container--opened': isOpen }"
+	>
 		<div class="insurance-item__content">
 			Hodor, hodor. Hodor. Hodor hodor HODOR! Hodor. Hodor, hodor, hodor hodor.
 			Hodor, hodor. Hodor. HODOR? HODOR hodor, hodor. Hodor hodor HODOR! Hodor.
