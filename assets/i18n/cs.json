@@ -1,0 +1,34 @@
+{
+	"application": {
+		"languages": {
+			"cs": "Česky",
+			"en": "Anglicky"
+		}
+	},
+	"applicationLanguage": "Jazyk aplikace",
+	"productType": "Produkt",
+	"pageTitle": "Titulek stránky",
+	"global": {
+		"goPrevious": "Předchozí krok",
+		"goNext": "Další krok"
+	},
+	"insurances": {
+		"productTypes": {
+			"property": "Majetek",
+			"travel": "Cestovko"
+		}
+	},
+	"travel": {
+		"navigation": {
+			"randomButton": "Random tlačítko"
+		},
+		"simulationInput": {
+			"tooltipsHeader": "Tooltipy",
+			"classicTooltip": "Tooltip s otazníkem",
+			"brandHelp": "Nápověda: Značka vozidla",
+			"brand": "<strong>Značka vozidla</strong> je výrobce vozidla",
+			"showAllTooltips": "Následující tlačítka zobrazí všechny tooltipy, které se jmenují daným jménem, bez nutnosti na ně najet myší",
+			"showTooltip": "Zobrazit '{{ name }}'"
+		}
+	}
+}

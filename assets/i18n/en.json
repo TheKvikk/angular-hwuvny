@@ -1,0 +1,34 @@
+{
+	"application": {
+		"languages": {
+			"cs": "Czech",
+			"en": "English"
+		}
+	},
+	"applicationLanguage": "Application Language",
+	"productType": "Product",
+	"pageTitle": "Page title",
+	"global": {
+		"goPrevious": "Previous Step",
+		"goNext": "Next Step"
+	},
+	"insurances": {
+		"productTypes": {
+			"property": "Property",
+			"travel": "Travel"
+		}
+	},
+	"travel": {
+		"navigation": {
+			"randomButton": "Random button"
+		},
+		"simulationInput": {
+			"tooltipsHeader": "Tooltips",
+			"classicTooltip": "Tooltip with questionmark",
+			"brandHelp": "Help: Plate Number",
+			"brand": "<strong>Brand</strong> is manufacturer name",
+			"showAllTooltips": "Following buttons will display all tooltips with given name (even without mouse hover)",
+			"showTooltip": "Show '{{ name }}'"
+		}
+	}
+}
