@@ -6,7 +6,7 @@
 		"ng": "ng",
 		"start": "ng serve -o",
 		"build": "ng build",
-		"publish": "git checkout gh-pages && git merge master --no-ff && npm run build && git add dist && git commit -a -m \"Update\" && git subtree push --prefix dist origin gh-pages && git checkout master"
+		"publish": "git checkout gh-pages && git merge master --no-ff && npm run build --base-href /angular-hwuvny/ && git add dist && git commit -a -m \"Update\" && git subtree push --prefix dist origin gh-pages && git checkout master"
 	},
 	"dependencies": {
 		"@angular/animations": "^9.1.1",
