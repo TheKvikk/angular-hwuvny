@@ -21,7 +21,7 @@
     "@angular/router": "^9.1.1",
     "@datorama/akita": "^4.22.0",
     "@datorama/akita-ng-forms-manager": "^3.3.0",
-    "@ngneat/transloco": "^2.14.0",
+    "@ngneat/transloco": "^2.23.5",
     "core-js": "^3.6.4",
     "angular-imask": "^6.0.4",
     "rxjs": "^6.5.5",
